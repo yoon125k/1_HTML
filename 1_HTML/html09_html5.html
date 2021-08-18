@@ -6,8 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <!-- 시맨틱 태그 -->
+
+  <style type="text/css">
+    .html5{
+      border: 1px dotted red;
+      
+    }
+    #left{
+      width: 45%;
+      height: 85%;
+      float: left;
+    }
+    #right{
+      width: 45%;
+      height: 85%;
+      float: right;
+    }
+    section{
+      height: 400px;
+    }
+  
+  </style>
+
 </head>
 <body>
-  
+  <header class="html5">
+    <h1>제목</h1>
+    <nav>
+        <span><a href="html01_block_inline.html">메뉴1</a></span>
+        <span><a href="html02_div_span.html"></a></span>
+        <span><a href="html03_title_paragraph.html"></a></span>
+        <span><a href="html04_a.html"></a></span>
+    </nav>
+    <header>
+      <section class="html5">
+        <article class="html5" id ="left">
+          <p>왼쪽 본문 내용</p>
+        </article class="html5" id="right">
+        <article>
+          <p>오른쪽 본문 내용</p>
+        </article>
+      </section>
+      <footer class="html5" style="clear: both;">
+        <address>copyright &copy; all right reserved...</address>
+      </footer>
 </body>
 </html>
