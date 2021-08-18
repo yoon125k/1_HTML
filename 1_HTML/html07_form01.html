@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼 태그</title>
+</head>
+<body>
+  <!-- post : url에 정보노출 X ,
+        get : url에 정보노출 -->
+  <form action="html07_form01_res.html" method="get">
+    <!-- 묶는역할 fieldset -->
+    <fieldset>
+      <!-- fieldset의 제목 : legend -->
+      <legend>회원가입</legend>
+      <p>아이디: <input type="text" name="id"></p>
+      <p>비밀번호: <input type="text" name="pw"></p>
+      <p>이메일 수신 여부
+        <input type="radio" name="radio" value="y"> y
+        <input type="radio" name="radio" value="n"> n
+      </p>
+      <p>관심분야</p>
+        <input type="checkbox" name="cb1" value="java"> java
+        <input type="checkbox" name="cb2" value="oracle"> oracle
+        <input type="checkbox" name="cb3" value="html"> html
+        <p>
+          <input type="submit" value="전송">
+          <input type="reset" value="취소">
+          <input type="button" value="버튼">
+        </p>
+    </fieldset>
+  </form>
+  
+</body>
+</html>
