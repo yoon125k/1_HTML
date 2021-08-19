@@ -1,0 +1,22 @@
+
+/* 타입 선택자 */
+
+pre{
+  text-align: center;
+}
+
+h1{
+  text-align: right;
+  color: blue;
+}
+
+/* id 선택자 */
+#sid01{
+  color:green;
+}
+#sid02 {
+  color:yellow;
+}
+#sid03 {
+  color:brown;
+}
