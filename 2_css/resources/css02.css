@@ -20,3 +20,49 @@ h1{
 #sid03 {
   color:brown;
 }
+
+/* class 선택자 */
+
+.scls{
+  color:pink;
+}
+
+#scls01{
+  background-color: green;
+}
+
+/* 전체 선택자 
+*{
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}*/
+
+
+/* 자식 선택자 */
+#at > p{
+  color: orange;
+}
+
+#at > div>p{
+  color:silver;
+}
+
+/* 인접 선택자 */
+h3 + b{
+  background-color: yellow;
+  color:brown;
+}
+
+span + b{
+  background-color: black;
+  color:white;
+}
+
+/* 속성 선택자 */
+p[title="b"]{
+  color:yellow;
+}
+p[name]{
+  color:green;
+}
