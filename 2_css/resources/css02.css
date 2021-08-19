@@ -66,3 +66,40 @@ p[title="b"]{
 p[name]{
   color:green;
 }
+
+/* 가상 클래스 선택자 */
+a:link{
+  color:pink;
+}
+a:visited{
+  color: gray;
+}
+a:hover{
+  background-color: purple;
+}
+a:active{
+  color:red;
+}
+input:checked{
+  width: 200px;
+  height: 200px;
+}
+
+/* 종속 선택자 */
+li.acls01{
+  background-color: green;
+}
+li.acls02#sidli{
+  background-color: pink;
+  font-size: 20px;
+}
+
+/* 하위 선택자 */
+div span{
+  background-color: yellow;
+}
+
+/* 그룹 선택자 */
+p, pre, strong{
+  color: lime;
+}
