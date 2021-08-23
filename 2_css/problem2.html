@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYMain</title>
+    <style type="text/css">
+ 
+    header{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+    }
+    header > h2{
+        margin-left: 20px;
+    }
+    header > img {
+        width: 150px;
+        height: 80px;
+    }
+    header > div {
+        font-size : 10px;
+        height: 100%;
+        margin: 0;
+    }
+    header > div > p{
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul{
+        list-style-type: none;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0;
+        
+    }
+    ul > li{
+        font-size: 16px;
+        padding: 10px 150px 15px 25px;
+    }
+
+    section {
+        width: 100%;
+        height: 500px;
+        background-color: gray;
+    }
+
+    footer{
+        width: 100%;
+        height: 100px;
+        background-color: skyblue;
+
+    }
+    footer #footer{
+        font-size: 13px;
+        text-align: center;
+        padding-top: 55px;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        <img src="images/img01.png">
+        <h2>MYMain</h2>
+            <div>
+            <p>아이디&nbsp;<input type="text" id="id"></p>
+            <p>패스워드&nbsp;<input type="password" id="pw"></p>
+            <input type="submit" value="로그인">
+            <input type="submit" value="취소">
+            </div>
+        </header>
+    </div>
+    
+    <nav>
+        <div id="menu">
+            <ul>
+                <li>메인</li>
+                <li>공지사항</li>
+                <li>자유게시판</li>
+                <li>갤러리</li>
+                <li>회원관리</li>
+                <li>채팅하기</li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        content내용
+    </section>
+
+    <footer>
+        <div id="footer">
+        Copyright © 1988-2019 KH Information Educational Insitute All Right Reserved
+        </div>
+    </footer>
+</body>
+</html>

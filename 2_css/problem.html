@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <style type="text/css">
+    *{
+        font-size: 16px;
+    }
+    h2{
+        font-size:40px
+    }
+    .fieldset{
+        width: 400px;
+        height: 580px;
+        border-radius: 8px;
+        background-color:rgb(83, 124, 20) ;
+        border-style: none;
+    }
+    li {
+        border-color: white;
+        border-radius: 8px;
+        list-style-type: none;
+        margin: 1px 1px 1px 1px;
+        padding: 0px 1px 0px 5px;
+    }
+    ul {
+        
+        margin: 0px 15px 0px 3px;
+        padding: 1px;
+    }
+    p{
+        margin: 0;
+    }
+    .fieldset li ul li{
+        background-color:rgba(125, 150, 99, 0.897);
+        position: relative;
+        padding: 13px;
+        border: 1px solid white;
+    }
+    .fieldset li ul li input{
+
+        float:right;
+    }
+    #range1{
+        padding: 20px;
+    }
+    #range2 {
+        margin: -10px;
+        padding: 5;
+        float:left;
+    }
+    #submit{
+        font-size: 10px;
+        width: 80px;
+        height: 30px;
+        border-style: none;
+        border-radius: 15px;
+        background-color: rgb(36, 78, 36);
+        color:white;
+    }
+    </style>
+
+</head>
+<body>
+    <h2>CSS3</h2>
+    <fieldset class="fieldset">
+        <li>
+            <ul> 
+                <p>Step 1: 로그인 정보</p>
+                <li>아이디 <input type="text" ></li>
+                <li>비밀번호 <input type="password"></li>
+                <li>비밀번호 확인 <input type="password"></li>
+                <li>회원 등급 <input type="text"></li>
+            </ul>
+         </li>
+        <li>
+            <ul>
+                <p>Step 2: 개인 정보</p>
+                <li>이름 <input type="text" placeholder="5자미만 공백없이" maxlength="5"></li>
+                <li>메일 주소<input type="email" placeholder="abcd@domain.com"></li>
+                <li>연락처<input type="tel"></li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+            <p>Step 3: 코딩 숙련도(상,중,하)</p>
+            <li id="range1"><input type="range" id="range2"></li>
+            </ul>
+        </li>
+        <ul>
+        <li id="subm"><input type="submit" id="submit" value="제출"></li>
+        </ul>
+    </fieldset>
+    
+</body>
+</html>
