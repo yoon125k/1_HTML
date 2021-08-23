@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style type="text/css">
+    div{
+        width: 100px;
+        height: 100px;
+        font-size: 30pt;
+        background-color: red;
+        /* word-wrap : 글자의 범위를 벗어나지 못하게 */
+        word-wrap: break-word;
+        animation: mybox 2s infinite;
+    }
+
+    @keyframes mybox {
+        0%{width:150px; height: 150px; background-color: yellow; transform:translate(10px,10px);}
+        50%{width: 250px; height: 250px; background-color: orange; transform: translate(100px,100px);}
+        100%{width: 200px; height: 200px; background-color: red; transform: translate(10px,10px);}
+    }
+    </style>
+</head>
+<body>
+    <h1>Animation 효과</h1>
+    <div>Animation</div>
+</body>
+</html>
