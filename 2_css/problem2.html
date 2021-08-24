@@ -1,121 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYMain</title>
-    <style type="text/css">
-    div{
-        border:3px dashed red;
-    }
+    <style>
+        body{
+            width: 100%;
+            height: 720px;
+        }
 
-    header{
-        width: 100%;
-        height: 80px;
-        text-align: center;
-        /* display: flex;
-        align-content: center;
-        justify-content: space-between; */
-    }
+        /* HEADER */
+        header {
+            width: 100%;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+        }
 
-    .common {
-        display: inline-block;
-        font-size: 25px;
-        width: 150px;
-        height: 50px;
-    }
-    .content{
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
+        .logo {
+            float: left;
+            position: absolute;
+        }
 
+        .login {
+            border: none;
+            float: right;
+            position: relative;
+            padding: 0;
+            font-size: 16px;
+            
+        }
+        .login #id,#pw{
+            float: right;
+        }
 
-    header img {
-        width: 150px;
-        height: 80px;
-    }
+        .title {
+            position: absolute;
+            top: 5%;
+            left: 45%;
+            margin: auto;
+            clear: both;
+            z-index: 999;
+            font-size: 30px;
+        }
 
-    .login {
-        width: 200px;
-        float:right;
-        font-size: 14px;
-    }
-    .logo {
-        float:left;
-    }
-    .title{
-        padding: 5px;
-        clear:right;
-    }
+        /* NAV */
+        nav{
+            position: relative;
+            width: 100%;
+            height: 30px;
+            font-size: 19px;
+            padding: 0;
+            margin: 0;
+        }
+        .menu{
+            list-style-type: none;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: inline;
+        }
+        .menu li{
+            display: inline-block;
+            margin-right: 220px;
+            margin-left: 25px;
+        }
 
-    .login p{
-        float:left;
-    }
+        /* section */
+        section{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            background-color: gray;
+        }
 
-    #menu ul{
-        list-style-type: none;
-        display: flex;
-        width: 100%;
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        
-    }
-    #menu ul > li{
-        font-size: 16px;
-        padding: 10px 150px 15px 25px;
-    }
-
-    section {
-        width: 100%;
-        height: 500px;
-        background-color: gray;
-    }
-
-    footer{
-        width: 100%;
-        height: 100px;
-        background-color: skyblue;
-
-    }
-    footer #footer{
-        font-size: 13px;
-        text-align: center;
-        padding-top: 55px;
-    }
-
-
+        /* footer */
+        footer{
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background-color: skyblue;
+        }
+        footer p{
+            /* margin: 5 auto; */
+            margin: 0;
+            padding-top: 50px;
+            text-align: center;
+            font-size: 15px;
+            
+        }
     </style>
 </head>
+
 <body>
-
+    <!-- HEADER -->
     <header>
-        <div class="title common"><p class="content">MYMain</p></div>
-        <div class="logo common"><p class="content"><img src="images/img01.png"></p></div>
-        <div class="login common"><p class="content">
-        <p style="clear:both">아이디&nbsp;&nbsp;<input type="text" id="id"></p>
-        <p style="clear:both;">패스워드&nbsp;<input type="password" id="pw"></p>
-        <input type="submit" value="로그인">
-        <input type="submit" value="취소">
-        </p>
-        </div>
-     </header>
-        
+            <img src="images/img01.png" class="logo" width="150px" height="100px">
+            <p class="title">MYMain</p>
+            <fieldset class="login">
+                <label>아이디</label><input type="text" id="id"><br>
+                <label>패스워드</label><input type="password" id="pw"><br>
+                <input type="submit" value="로그인" id="login">
+                <input type="submit" value="취소" id="clean">
+            </fieldset>
+    </header>
 
-    
+    <!-- NAV -->
     <nav>
-        <div id="menu">
-            <ul>
-                <li>메인</li>
-                <li>공지사항</li>
-                <li>자유게시판</li>
-                <li>갤러리</li>
-                <li>회원관리</li>
-                <li>채팅하기</li>
-            </ul>
-        </div>
+        <ul class="menu">
+            <li>메인</li>
+            <li>공지사항</li>
+            <li>자유게시판</li>
+            <li>갤러리</li>
+            <li>회원관리</li>
+            <li>채팅하기</li>
+        </ul>
     </nav>
 
     <section>
@@ -123,9 +127,9 @@
     </section>
 
     <footer>
-        <div id="footer">
-        Copyright © 1988-2019 KH Information Educational Insitute All Right Reserved
-        </div>
+        <p>Copyright..</p>
     </footer>
+
 </body>
+
 </html>
