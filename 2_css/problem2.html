@@ -6,50 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYMain</title>
     <style type="text/css">
-    .container header{
+    div{
+        border:3px dashed red;
+    }
+
+    header{
         width: 100%;
         height: 80px;
+        text-align: center;
         /* display: flex;
         align-content: center;
         justify-content: space-between; */
-        clear: both;
-        display: inline;
     }
 
-    .container header ul {
-        padding: 0;
+    .common {
+        display: inline-block;
+        font-size: 25px;
+        width: 150px;
+        height: 50px;
+    }
+    .content{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
     }
 
-    .container header ul li{
-        list-style: none;
-    }
-    
-    .container header ul li h2{        
-        position: absolute;
-        left: 50%;
 
-    }
-    .container header ul li img {
-        float: left;
+    header img {
         width: 150px;
         height: 80px;
     }
-    .container header ul li div {
-        position: absolute;
-        float: right;
-        font-size: 10px;
-        height: 100%;
-        margin: 0;
-        top: 27px;
-        bottom: -20px;
-        right: 10px;
-    }
-    
 
-    .container header ul li div p{
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
+    .login {
+        width: 200px;
+        float:right;
+        font-size: 14px;
+    }
+    .logo {
+        float:left;
+    }
+    .title{
+        padding: 5px;
+        clear:right;
+    }
+
+    .login p{
+        float:left;
     }
 
     #menu ul{
@@ -88,22 +90,20 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <ul>
-                <li><img src="images/img01.png"></li>
-                <li><h2>MYMain</h2></li>
-                <li>
-                    <div>
-                    <p>아이디&nbsp;<input type="text" id="id"></p>
-                    <p>패스워드&nbsp;<input type="password" id="pw"></p>
-                    <input type="submit" value="로그인">
-                    <input type="submit" value="취소">
-                    </div>
-                </li>
-            </ul>
-        </header>
-    </div>
+
+    <header>
+        <div class="title common"><p class="content">MYMain</p></div>
+        <div class="logo common"><p class="content"><img src="images/img01.png"></p></div>
+        <div class="login common"><p class="content">
+        <p style="clear:both">아이디&nbsp;&nbsp;<input type="text" id="id"></p>
+        <p style="clear:both;">패스워드&nbsp;<input type="password" id="pw"></p>
+        <input type="submit" value="로그인">
+        <input type="submit" value="취소">
+        </p>
+        </div>
+     </header>
+        
+
     
     <nav>
         <div id="menu">

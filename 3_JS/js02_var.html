@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수</title>
+    <script type="text/javascript">
+
+        window.onload = function () {
+            alert("load 후 실행");
+            
+        };
+        var variable = 10; // 전역변수 : 공용으로 사용, 값 유지됨
+
+        function test01() {
+            variable = variable + 5;
+            document.getElementById("v01").innerHTML =
+                "<b style='color:red;background:yellow;'>" + variable + "</b>";
+        }
+        function test02() { //지역변수
+            var variable2 = variable + 100;
+            document.getElementById("v02").innerHTML = "<b>" + variable2 + "</b>";
+        }
+
+        function test03(){
+            //문자
+            var varibale3 ="문자";
+            alert(varibale3 + " : " + typeof varibale3);
+            //숫자
+            varibale3 = 5;
+            alert(varibale3 + " : " + typeof varibale3);
+            //논리
+            varibale3 = true;
+            alert(varibale3 +":" + typeof varibale3);
+            //null
+            varibale3 = null;
+            alert(varibale3 + ":" + typeof varibale3);
+            //배열
+            varibale3 =[1,3,4,5,6];
+            alert(varibale3 + " : " + typeof varibale3);
+            //객체
+            varibale3 = {
+                name:"홍길동",
+                age:"19",
+                id:"user1"
+            };
+            alert(varibale3.name + " : "  + typeof varibale3);
+            //함수
+            varibale3=function(){
+                alert("타입 확인");
+            }
+            alert(varibale3 +":" + typeof varibale3);
+            
+            varibale3();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>변수의 사용</h1>
+
+    <dl>
+        <dt>변수의 선언 규칙</dt>
+        <dd>1. 대소문자 구분</dd>
+        <dd>2. 영문,$,_로 시작</dd>
+        <dd>3. 영문,$,_숫자를 포함할 수 있다.</dd>
+        <dd>4. 키워드나 예약어 사용불가</dd>
+
+        <dt>변수의 범위</dt>
+        <dd>1. 전역변수 : window 객체에 포함되는 변수로 다른 함수들에게 공용으로 사용할 수 있다.(값 유지)
+            <button onclick="test01();">확인 </button>
+        </dd>
+        <dd id="v01"></dd>
+        <dd>2.지역변수 :함수나 객체내부에 선언되고 실행이 종료 되면 사라짐
+            <button onclick="test02();">확인</button>
+        </dd>
+        <dd id="v02"></dd>
+
+        <dt>변수의 선언과 저장</dt>
+        <dd>1. var(const,let) 키워드를 사용하여 변수 선언</dd>
+        <dd>2. 변수의 타입은 저장되는 타입에 따라 결정된다.</dd>
+            <button onclick="test03();">확인</button>
+    </dl>
+</body>
+
+</html>
