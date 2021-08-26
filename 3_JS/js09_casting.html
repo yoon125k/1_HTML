@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>형변환</title>
+    <script type="text/javascript">
+        function testPlus(){
+            var test1 = 7+7;
+            var test2 = 7+"7";
+            var test3 = "7" + 7;
+            var test4 = 7+7+"7";
+            var test5 = 7+"7"+7;
+            var test6 = "7"+7+7;
+            var test7 = "7"+(7+7);
+            var doc = document.getElementById("area1");
+
+            doc.innerHTML += '7 + 7 = ' + test1 +"<br>";
+            doc.innerHTML += '7 + "7" = ' + test2 + "<br>";
+            doc.innerHTML += '"7" + 7 = ' + test3 + "<br>";
+            doc.innerHTML += '7+7+"7" = ' + test4 + "<br>";
+            doc.innerHTML += '7+"7"+7" = ' + test5 + "<br>";
+            doc.innerHTML += '"7"+7+7 = ' + test6 + "<br>";
+            doc.innerHTML += '"7"+(7+7) = ' + test7 + "<br>";
+        }
+
+        function castingTest(){
+            var num1 = 2;
+            var num2 = "3";
+
+            var doc = document.getElementById("area2");
+
+            doc.innerHTML += "num1 + num2 =" +num1+num2 + "<br>";
+            doc.innerHTML += "num1 + (num1+Number(num2)) = " + num1+ (num1+Number(num2))+ "<br>";
+            doc.innerHTML += "num1 + parseInt(num2) = " + (num1+parseInt(num2)) +"<br>";
+            doc.innerHTML += "num1 + parseFloat(num2) = " + (num1+parseFloat(num2))+ "<br>";
+
+            console.log(Number("100원"));
+            // NaN
+            console.log(parseInt("100원"));
+            // 100
+            console.log(parseInt("돈:100"));
+            // NaN
+
+        }
+
+    </script>
+
+    <style type="text/css">
+    p {
+        border:solid black 1px;
+    }
+
+    div{
+        border:solid black 2px;
+    }
+    button{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>문자열과 숫자의 "+"연산</h1>
+    <p>문자열+숫자 = 문자열</p>
+    <button onclick="testPlus();">Plus(+)</button>
+    <div id="area1">
+    </div>
+
+    <hr>
+
+    <h1>강제형변환</h1>
+    <p>Number(), parseInt(), parseFloat() 이용하여 강제형변환 할 수 있다.</p>
+    <button onclick="castingTest();">casting 테스트</button>
+    <div id="area2"></div>
+
+</body>
+</html>
