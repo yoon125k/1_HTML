@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rolling gallery</title>
+    <style type="text/css">
+    div{
+        border: black 2px solid;
+    }
+    p{
+        width: 250px;
+        height: 350px;
+        display: inline;
+        border: rgb(224, 29, 29) 2px solid;
+    }
+    a{ 
+        cursor: pointer;
+        font-size: 50pt;
+        border: rgb(0, 0, 0) 2px solid;
+    }
+    img{
+        border: black 2px solid;
+    }
+    #gallery{
+        width: 200px;
+        height: 200px;
+    }
+
+    </style>
+    <script type="text/javascript">
+        var num = 1;
+
+        function nextGallery(){
+            num++;
+            if(num > 3){
+                num = 1;
+            }
+            document.getElementById("gallery").src="images/img0"+num+".png";
+
+            return false;
+        }
+
+        function prevGrallery(){
+            num--;
+            if(num < 1){
+                num = 3;
+            }
+            document.getElementById("gallery").src="images/img0"+num+".png";
+        }
+    </script>
+</head>
+
+
+<body>
+    <div id="galleryWrap">
+        <p>
+            <a onclick="return prevGrallery();" href="http://www.naver.com" >◀</a>
+            <img src="images/img01.png" id="gallery">
+            <a onclick="nextGallery();" >▶</a>
+        </p>
+    </div>
+
+    
+</body>
+</html>
