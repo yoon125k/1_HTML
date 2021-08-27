@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>createTable</title>
+    <style>
+        td{
+            width:50px;
+            height:50px;
+        }
+    </style>
+</head>
+<body>
+	<h1> 행 열 갯수 각각 입력받아 테이블 만들기 </h1>
+    <h5> 힌트 : 반복문은 자바랑 같습니다. 다만! 변수만 var 데이터형이라는걸 기억해주세요 </h5>
+
+    <button onclick="makeTable();">테이블 생성</button>
+    
+    <br>
+    <div id="area1"></div>
+	
+	<script>
+    	function makeTable(){
+           var doc = document.getElementById("area1");
+           var i = window.prompt();  
+           var j = window.prompt();
+            // console.log(i,j);
+            var table = "<table border='1'>";
+            for(var r=0; r<i; r++){
+                table += "<tr>";
+                for(var d=0; d<j; d++){
+                    table += "<td></td>"
+                }
+                table +="</tr>";
+            }
+            table +="</table>";
+            doc.innerHTML += table;
+        }
+	</script>
+	
+	
+</body>
+</html>
