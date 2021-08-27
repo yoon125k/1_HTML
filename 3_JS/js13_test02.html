@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    function prn(){
+        var doc = document.getElementById("res");
+        var g = document.getElementById("get");
+
+        // var dd = document.getElementById("dl").value;
+        // doc.innerHTML += dd +"<br>";
+
+        doc.innerHTML += g[0].value+ "<br>";
+        doc.innerHTML += g[1].value+ "<br>";
+        doc.innerHTML += g[2].value+ "<br>";
+        doc.innerHTML += g[3].value+ "<br>";
+ 
+        console.log(g[1].value);
+        return false;
+    }
+    </script>
+    <style type="text/css">
+    body{
+        font-size: 16px;
+        margin: 5px;
+    }
+    #res{
+        height: 300px;
+        background-color: yellowgreen;
+        border: 1px solid black;
+    }
+    #gi{
+        padding: 0;
+        width: 225px;
+        height: 70px;
+    }
+    li{
+        margin: 20px;
+    }
+    #submit{
+        margin:20px 0;
+    }
+    
+    </style>
+</head>
+<body>
+    <h2>연습</h2>
+    <fieldset>
+        <legend>납품정보</legend>
+        <ul>
+            <form method="get" action="#" id="get">
+            <li>상품명 : <input type="text" name="r" list="dl" >
+            <datalist id="dl">
+                <option value="dog">도그</option>
+                <option value="cat">고양이</option>
+                <option value="milk">우유</option>
+            </datalist>
+            </li>
+            <li>납품수량: <input type="number" name="r" min="10" max="100" step="10" placeholder="최소10" ></li>
+            <li>납품등급: <input type="range" name="r" min="0" max="100" step="2"></li>
+            <li>기타사항: <textarea id="message" name="r" rows="5" cols="30"></textarea></li>
+        </ul>
+    </fieldset>
+    <input type="submit" id="submit" value="send message" onclick="return prn();">
+    </form>
+    <div id="res"></div>
+</body>
+</html>

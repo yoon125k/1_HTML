@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function prn(){
+        var doc = document.getElementById("text2");
+        var name = document.getElementsByName("text1");
+        
+        doc.innerHTML += "구입자: "+name[0].value+"<br>";
+        doc.innerHTML += "구입상품: "+name[1].value+"<br>";
+        doc.innerHTML += "구매가격: "+name[2].value+"<br>";
+        // console.log(name[0].value);
+    }
+    </script>
+    <style type="text/css">
+    body{
+        font-size: 16px;
+    }
+    #text2{
+        width: 300px;
+        height: 200px;
+        background-color: rgb(243, 243, 112);
+        border: 1px solid black;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <h1>연습1</h1>
+    구매자: <input type="text" placeholder="구매자의 이름을 입력하세요" name="text1" ><br>
+    상품명: <input type="text" placeholder="구매 상품명을 입력하세요." name="text1"><br>
+    가격: <input type="number" placeholder="가격을 입력하세요." name="text1"><br>
+    <button onclick="prn()">입력값 출력하기</button>
+    <div id="text2"></div>
+
+</body>
+</html>

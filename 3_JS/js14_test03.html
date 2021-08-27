@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function prn() {
+            var user = document.getElementById("rUser");
+            var data = document.getElementById("rData");
+            var title = document.getElementById("rTitle");
+
+            user.style.display = "none";
+            data.style.display = "none";
+
+            title.style.display = "block";
+        }
+        function prn2() {
+
+            var user = document.getElementById("rUser");
+            var data = document.getElementById("rData");
+            var title = document.getElementById("rTitle");
+
+            user.style.display = "none";
+            title.style.display = "none";
+
+            data.style.display = "block";
+        }
+        function prn3() {
+
+            var user = document.getElementById("rUser");
+            var data = document.getElementById("rData");
+            var title = document.getElementById("rTitle");
+
+            title.style.display = "none";
+            data.style.display = "none";
+
+            user.style.display = "block";
+        }
+
+        function showDiv(element){
+            var user = document.getElementById("rUser");
+            var data = document.getElementById("rData");
+            var title = document.getElementById("rTitle");
+            console.log(element);
+            if(element.checked == true && element.value =="title"){
+                document.getElementById("rTitle").style.display="block";
+                
+                user.style.display = "none";
+                data.style.display = "none";
+            }else if(element.checked == true && element.value=="data"){
+                
+                user.style.display = "none";
+                title.style.display = "none";
+
+                document.getElementById("rData").style.display="block";
+            }else if(element.checked == true && element.value=="user"){
+                document.getElementById("rUser").style.display="block";
+
+                title.style.display = "none";
+                data.style.display = "none";
+            }
+        }
+
+
+    </script>
+    <style>
+        body {
+            font-size: 20px;
+        }
+        fieldset {
+            width: 500px;
+            background-color: lightgray;
+            text-align: center;
+        }
+        .box{
+            width:500px;
+            height: 50px;
+            margin: 10px;
+            padding: 10px;
+            background-color: orange;
+            display: none;
+        }
+        input[type="submit"i] {
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>연습 3</h1>
+    <fieldset>
+        <legend>검색할 항목을 선택하세요.</legend>
+        <input type="radio" name="category" id="title" value="title" onclick="showDiv(this);">제목
+        <input type="radio" name="category" id="data" value="data" onclick="showDiv(this);">날짜
+        <input type="radio" name="category" id="user" value="user" onclick="showDiv(this);">작성자
+    </fieldset>
+    <hr>
+    <div id="rTitle" class="box" >
+        검색할 제목을 입력하세요 : <br>
+        <input type="text" size=50><input type="submit" value="검색">
+    </div>
+    <div id="rData" class="box" >
+        검색할 날짜를 선택하세요 : <br>
+        <input type="date"><input type="date"><input type="submit" value="검색">
+    </div>
+    <div id="rUser" class="box" >
+        검색할 작성자 아이디를 입력하세요 : <br>
+        <input type="text" size=20><input type="submit" value="검색">
+    </div>
+</body>
+
+</html>
