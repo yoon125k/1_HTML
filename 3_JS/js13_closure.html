@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저</title>
+</head>
+<body>
+    <h1>클로저</h1>
+    <h3>지역변수의 스코프</h3>
+    <p>함수 내부에 선언된 변수는 함수 밖에서 사용 할 수 없다.</p>
+    <script type="text/javascript">
+        function test1(name){
+            var output = 'hello' + name+ "님!!";
+        }
+        alert(output);
+    </script>
+    <hr>
+    <h3>클로저</h3>
+    <p>지역변수는 함수가 실행될 떄 생성되고 함수가 종료될떄 사라진다.<br>
+    하지만 함수를 리턴하는 함수(클로저)를 이용하면 규칙을 위반할수있다.</p>
+
+    <button onclick="text2('홍길동');">실행확인 </button>
+    <script>
+        function text2(name){
+            var output = 'hello' + name + '님!';
+            return function(){
+                alert(output);
+            }
+        }
+    </script>
+    
+    <hr>
+    <h3>추가연습>
+    <button onclick="text4(this)";>javascript</button>
+    <button onclick="text4(this)";>JQuery</button>
+    <script type="text/javascript">
+        function text3(subject){
+            var output = "오늘배울내용은"+ subject + "입니다.";
+            return function(){
+                return output;
+            }
+
+        }
+        function text4(ele){
+            console.log(ele);
+            var subject = ele.innerHTML;
+            alert(text3(subject)());
+
+        }
+    </script>
+</body>
+</html>

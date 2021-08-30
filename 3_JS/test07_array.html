@@ -26,18 +26,34 @@
 	
 	<script>
 		function print2Test(){
-			var doc = document.getElementById("print4");
 
-			var aPop = document.getElementById("remove").value;
-			console.log(aPop);
-			var aPush = document.getElementById("add").value;
-			console.log(aPush);
-			var arr = new Array('피자','치킨','햄버거','떡볶이','타코야끼');
+			var str = document.getElementById("stringla4").innerHTML;
+			var arr = str.split(" ");
+
+			var remove = document.getElementById("remove").value;
+			var add = document.getElementById("add").value;
+
+			for(var i=0; i<arr.length; i++){
+				if(arr[i] == remove){
+					arr.splice(i,1);
+				}
+				
+			}
+			arr.push(add);
+			document.getElementById("print4").innerHTML = arr.join(' ');
+
+			// var doc = document.getElementById("print4");
+
+			// var aPop = document.getElementById("remove").value;
+			// console.log(aPop);
+			// var aPush = document.getElementById("add").value;
+			// console.log(aPush);
+			// var arr = new Array('피자','치킨','햄버거','떡볶이','타코야끼');
 			
-			arr.pop(aPop);
-			arr.push(aPush);
+			// arr.pop(aPop);
+			// arr.push(aPush);
 
-			doc.innerHTML += arr;
+			// doc.innerHTML += arr;
 
 				
 		}

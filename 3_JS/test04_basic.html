@@ -45,11 +45,12 @@
     	function stringSplit(){
 			var doc = document.getElementById("result2");
 
-			var arr = "콜라,사이다,햄버거,피자,한약";
-			var spl = arr.split(',');
+			// var arr = "콜라,사이다,햄버거,피자,한약";
+			var arr = document.getElementById("la1").innerHTML.split(',');
+			// var spl = arr.split(',');
 
-			for(i=0; i<spl.length; i++){
-				doc.innerHTML += spl[i]+"<br>";
+			for(i=0; i<arr.length; i++){
+				doc.innerHTML += arr[i]+"<br>";
 			}
 			
 			
