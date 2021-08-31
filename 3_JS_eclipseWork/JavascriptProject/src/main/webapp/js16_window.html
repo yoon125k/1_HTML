@@ -21,6 +21,22 @@ function regisFrom(){
 		btns[i].disabled = "disabled";
 	}
 }
+
+function closeWin(){
+	document.getElementById("regist").style.display = "none";
+	document.body.style.background = "white";
+	
+	var btns = document.getElementsByName("btn");
+	for(var i in btns){
+		btns[i].disabled ="";
+	}
+}
+function idchk(){
+	alret("중복체크를 확인하세요.");
+}
+function idCheck(){
+	open("js16_window03.html","","width=300px,height=300px");
+}
 </script>
 
 <style type="text/css">
@@ -63,7 +79,7 @@ function regisFrom(){
 		<button onclick="openWin();" name="btn">창열기</button>
 		<div id="tt"></div>
 		<h1>회원가입하기(div팝업)</h1>
-		<button onclick="regisFrom();">회원가입</button>
+		<button onclick="regisFrom();" name="btn">회원가입</button>
 	</div>
 	
 	<!-- 회원가입 폼 시작 -->
@@ -79,7 +95,7 @@ function regisFrom(){
 				</td>
 				</tr>
 					<td>패스워드</td>
-					<td><input tpye="password" name="pwd" style="color:red;"></td>
+					<td><input type="password" name="pwd" style="color:red;"></td>
 				<tr>
 					<td colspan="2" align="center">
 						<input type="button" value="확인" onclick="closeWin();"></td>

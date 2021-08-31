@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            /* background-color 설정 */
+            background-color: white;
+            /* 모든 여백 제거 */
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            /* 가운데 정렬 */
+            text-align: center;
+            /* 폰트 크기 조정 */
+            font-size: 70px;
+            /* 색깔 지정 */
+            color: #2DB400;
+            /* 여백 제거 */
+            margin: 0;
+            /* 상20px 우좌하0 */
+            padding: 20px 0 0 0;
+        }
+        div{
+            background-color: rgb(234, 247, 255);
+            /* 가로 크기 제한 */
+            width: 530px;
+            /* 상하 30px 띄우기 auto 가운데 정렬 */
+            margin: 30px auto;
+        }
+        input{
+            /* 가로 크기 지정 */
+            width: 440px;
+            /* 상하 5px 좌우 여백 제거 */
+            margin: 5px 0;
+            /* 안쪽여백 2px */
+            padding: 2px;
+        }
+        ul{
+            /* 여백 제거 */
+            margin: 0;
+            /* 여백 상하0 우좌41px */
+            padding: 0 41px ;
+        }
+        li{
+            /* list 앞에 기호 제거 */
+            list-style: none;
+            /* 상하 15px 띄우고 좌우 여백 제거 */
+            margin: 15px 0;
+        }
+        input,select{
+            /* input , select 창의 높이 설정 */
+            height: 40px;
+            border: 1px solid gray;
+        }
+        label{
+            /* label 태그와 input 태그의 줄간격 설정 */
+            line-height: 30px;
+        }
+        button{
+            /* 글씨 크기 16px 지정 */
+            font-size: 16px;
+            /* 마우스를 가져다 댈 시 손가락 모양 */
+            cursor: pointer;
+            /* 색깔 흰색 지정 */
+            color: white;
+            /* 바탕색 초록색 지정 */
+            background-color: #2DB400;
+            /* 테두리 초록색 지정 */
+            border: 1px solid #2DB400;
+            /* 높이 40px 지정 */
+            height: 40px;
+            /* block으로 한 공간을 차지하도록 설정 */
+            display: block;
+        }
+        #brl {
+            width: 448px;
+        }
+
+        /* number 기호 삭제 */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+
+        #year{
+            /* 가로 크기 150px */
+            width: 150px;
+        }
+        #month{
+            /* 가로 크기 90px 높이 44px */
+            width: 90px;
+            height: 44px;
+            /* 상하 0 우좌 18px 여백설정 */
+            margin: 0px 18px;
+        }
+        #day{
+            /* 가로 크기 155px */
+            width: 155px;
+            /* 오른쪽 정렬 */
+            float: right;
+            /* 여백 제거 */
+            margin: 5px 0 0 0;
+
+        }
+        #btnChk{
+            /* 오른쪽 정렬 */
+            float: right;
+            /* 상하 7px 좌우 여백 제거 */
+            margin: 7px 0;
+        }
+        label{
+            /* 글꼴 크기 16px */
+            font-size: 16px;
+            /* 부제목 굵게 설정 */
+            font-weight: bold;
+        }
+        /* id의 placeholder 속성을 */
+        #id[placeholder]{
+            /* @naver.com 오른쪽 정렬 */
+            text-align: right;
+        }
+        #gender,#phone{
+            /* 가로 크기 448px */
+            width: 448px;
+            /* 상하 5px 좌우 여백 제거 */
+            margin: 5px 0;
+        }
+        #phone2{
+            /* 가로 크기 310px */
+            width: 310px;
+        }
+        #submit1{
+            /* 가로 크기 448px */
+            width: 448px;
+            /* 상하 여백 제거 좌우 5px */
+            margin: 0;
+        }
+
+        /* footer */
+        #footer{
+            font-size: 12px;
+            text-align: center;
+            margin: 0;
+            padding: 0 0 50px 0;
+        }
+        #footer p{
+            margin: 5px 0;
+        }
+        #footer span{
+            color: #2DB400;
+        }
+ 
+    </style>
+</head>
+<body>
+    <!-- div : 공간을 배정 -->
+    <div id=content>
+        <!-- h1 : 제목 태그 -->
+        <h1></h1>
+        <h1>NAVER</h1>
+        <!--  form : 입력을 사용자로부터 받아서 사용-->
+        <form>
+            <!-- ul : 리스트로 만들기 위해 사용 -->
+        <ul>
+            <!-- li : 세부 리스트 작성 -->
+        <li>
+            <!-- Tag / label  제목을 클릭시 그에 따른 input tag 로 이동-->
+        <label>아이디<br> 
+            <!-- 입력 제한 속성 : 텍스트 , id는 문자열 입력받게 설정 -->
+            <!-- placeholder : input 태그안에 글자 설정 -->
+            <!-- required : 입력 필수 요소 -->
+            <input type="text" id="id" placeholder="@naver.com" required></label>
+        </li>
+        <li>
+        <label>비밀번호<br>
+            <!-- 입력 제한 속성 : 패스워드 , pw는 입력시 기호로 나오게 설정 -->
+            <!-- maxlength : 최대 12자 -->
+            <!-- required : 입력 필수 요소 -->
+            <input type="password" id="pw" maxlength="12" required></label>
+        </li>
+        <label>비밀번호 재확인<br>
+            <!-- 입력 제한 속성 : 패스워드 , pw는 입력시 기호로 나오게 설정 -->
+            <!-- maxlength : 최대 12자 -->
+            <!-- required : 입력 필수 요소 -->
+            <input type="password" id="pwChk" maxlength="12" required></label>
+        
+        <li>
+        <label>이름<br>
+            <!-- 입력 제한 속성 : 텍스트 , 이름은 문자열로 입력받음 -->
+            <!-- required : 입력 필수 요소 -->
+            <input type="text" required></label>
+        </li>
+
+        <li id = "brl">
+        <label>생년월일<br>
+            <!-- 입력 제한 속성: 텍스트로 입력 받고 년도는 4자리를 입력 받게 설정 -->
+            <!-- placeholder : input 태그안에 글자 설정 -->
+            <!-- min - max : 최소1900 최대 2021 -->
+            <!-- maxlength : 최소 4글자 -->
+            <!-- required : 입력 필수 요소 -->
+            <input type="number" id="year" placeholder="년(4자)" min="1900" max="2021" minlength="4" required>
+            <!-- 입력 제한 속성 : select 를 활용하여 월 을 선택할 수 있게 함 -->
+            <select id="month">
+                <!-- value selected : 미리 선택하게 설정 -->
+                <option value selected>월</option>
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <!-- 입력 제한 속성 : 숫자로 입력 받기 -->
+            <!-- placeholder : input 태그안에 글자 설정 -->
+            <!-- min - max : 최소 1 에서 최대 31 숫자입력 -->
+            <input type="number" id="day" placeholder="일" min= "1" max ="31"></label>
+        </li>
+
+        <li>
+        <label>성별<br>
+            <!-- 입력 제한 속성 : select를 활용하여 남자,여자 를 선택 할 수 있게함 -->
+            <select id="gender">
+                <!-- value selected : 미리 선택하게 설정 -->
+                <option value selected>성별</option>
+                <option value="man">남자</option>
+                <option value="girl">여자</option>
+            </select></label>
+        </li>
+
+        <li>
+            <label>본인 확인 이메일(선택)<br>
+                <!-- 입력 제한 속성 : email 을 활용하여 @를 포함한 이메일을 입력받게 설정 -->
+                <!-- placeholder : input 태그안에 글자 설정 -->
+                <!-- max : 최대 50글자까지 입력가능 -->
+            <input tpye="email" id="email" placeholder="선택입력" max="50"></label>
+        </li>
+
+        <li>
+            <label>휴대전화<br> 
+                <!-- 입력 제한 속성 : select를 활용하여 지역번호를 선택하게 설정 -->
+                <!-- required : 필수 입력 요소 -->
+            <select id="phone" required>
+                <option value="+82">대한민국 +82</option>
+                <option value="+1">미국 +1</option>
+            </select><br>
+            <!-- 입력 제한 속성 : tel 을 활용하여 전화번호를 입력 받게 설정 -->
+            <!-- placeholder : input 태그안에 글자 설정 -->
+            <!-- required : 필수 입력 요소 -->
+            <input type="tel" id="phone2" placeholder="전화번호 입력" required>
+            <!-- 입력 제한 속성 : butten 태그를 활용하여 클릭하면 인증 번호를 받을 수 있게 설정 -->
+            <!-- required : 필수 입력 요소 -->
+            <button type="btn" id="btnChk" required>인증번호 받기</button><br>
+            <!-- 입력 제한 속성 : text를 활용하여 인증번호를 입력 받게 설정 -->
+            <!-- placeholder : input 태그 안에 글자 설정 -->
+            <!-- required : 필수 입력 요소 -->
+            <input type="text" id="btnChk2" placeholder="인증번호 입력하세요." required><br>
+            <!-- 입력 제한 속성 : butten 태그를 활용하여 클릭하여 활용 할 수 있게 설정 -->
+            <button type="submit" id="submit1">가입하기</button></label>
+        </li>
+        </ul>
+        <!-- 바닥 글 -->
+        <div id="footer">
+            <!-- p 태그 라인 block 설정 , a 태그 하이퍼링크 설정 
+                text-decoration : none 링크 밑줄 제거 -->
+            <!-- span 태그 NAVER 컬러 지정 -->
+            <p> <a href="#" style ="text-decoration: none; color:black;">이용약관</a>&nbsp;
+                <a href="#" style ="text-decoration: none; color:black;">개인정보</a>&nbsp;
+                <a href="#" style ="text-decoration: none; color:black;">고객센터</a>&nbsp;
+               
+            </p><span>NAVER</span>&nbsp;Copyright
+        </div>
+         </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style type="text/css">
+        body{
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+        fieldset{
+            width: auto;
+            height: 330px;
+            margin: 10px;
+        }
+        div{
+            margin: 1px;
+        }
+        label{
+            font-size: 17px;
+            font-weight: bold;
+        }
+        span{
+
+            margin: 0 22px 0 23px;
+        }
+        #ctl{
+            position: relative;
+            bottom: 100px;
+        }
+        #fl{
+            margin: 0 12px 0 0;
+        }
+        input[type="file"]{
+            margin: 0;
+        }
+        input{
+            width: 296px;
+            margin: 5px 10px;
+        }
+        #tt{
+            width: 296px;
+            margin: 0;
+        }
+
+
+        #sbmW{
+            width: 300px;
+
+        }
+        #sbm{
+            display: block;
+            margin: 25px auto;
+            width: 80px;
+        }
+        hr{
+            margin: 25px 0;
+        }
+
+        /* table */
+        table,th,td{
+            margin: 10px;
+            border: 2px double black;
+        }
+        table{
+            width: 99%;
+        }
+        th{
+            height: 30px;
+            width: auto;
+            text-align: center;
+            background-color: rgb(245, 144, 126);
+            font-weight: bold;
+            color: white;
+            font-size: 17px;
+        }
+        td{
+            height: 25px;
+            background-color:rgb(255, 251, 202);
+        }
+       
+        #t1{
+            width: 4%;
+        }
+        #t2{
+            width: 10%;
+        }
+        #t3{
+            text-align: center;
+            width: 10%;
+            background-color: lightgray;
+        }
+        #t4{
+            width: 15%;
+        }
+        #t5{
+            width: 6%;
+        }
+        #tfoot{
+            height: 20px;
+            width: auto;
+            text-align: center;
+            background-color: rgb(245, 144, 126);
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>포트폴리오 문제</h2>
+    <hr>
+    <p>하단의 화면처럼 공지사항 작성하기 폼을 작성하시오.(form의 action속성값은 "insert.no"부여, method 속성값은 "post 부여)</p>
+    <fieldset>
+        <legend>공지사항 작성하기</legend>
+        <form action="insert.no" mathod="post">
+        <div>
+        <label><span>제목</span>
+        <input type="text" id="tt" name="title" placeholder="제목을 입력하시오" required></label><br>
+        </div>
+        <div>
+        <label><span id="ctl">내용</span>
+            <textarea id="ct" name="content" cols="40" rows="13" placeholder="내용을 입력하시오" style="resize:none;" required></textarea></label><br>
+        </div>
+        <div>
+        <label><span id="fl">파일선택</span>
+            <input type="file" name="uploadFile"></label><br>
+        </div>
+        <div id="sbmW">
+        <input type="submit" id="sbm" value="작성하기">
+        </div>
+        </form>
+    </fieldset>
+    <hr>
+    <table border="2">
+        <th id ="t1">번호</th>
+        <th colspan="2">제목</th>
+        <th id="t2"> 작성자</th>
+        <th id="t4">작성일</th>
+        <th id="t5">조회수</th>
+        <tr>
+            <td>9</td>
+            <td>공지사항 제목 9</td>
+            <td id="t3">바로가기</td>
+            <td>user01</td>
+            <td>2021-03-29</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>공지사항 제목 6</td>
+            <td id="t3">바로가기</td>
+            <td>answ445</td>
+            <td>2021-03-12</td>
+            <td>67</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>공지사항 제목 3</td>
+            <td id="t3">바로가기</td>
+            <td>testg12</td>
+            <td>2021-03-01</td>
+            <td>98</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>공지사항 제목 2</td>
+            <td id="t3">바로가기</td>
+            <td>palwe3</td>
+            <td>2021-01-02</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>공지사항 제목 1</td>
+            <td id="t3">바로가기</td>
+            <td>xml23</td>
+            <td>2020-12-24</td>
+            <td>124</td>
+        </tr>
+        <tr>
+            <td id="tfoot" colspan="4">전체공지사항 갯수</td>
+            <td id="tfoot" colspan="2">5개</td>
+        </tr>
+    </table>
+</body>
+</html>
