@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //객체 작성 1
+        function myClassS(){
+            this.name ="KH"; //외부 접근 가능
+            var name02 ="S강의실"; // 외부 접근 불가능
+            this.getName02=function(){
+                return name02;
+            }
+        }
+
+        
+        //객체 작성 2
+        var myClassS_2 = {
+            name:"kh ac",
+            print:function(){
+                alert(myClassS_2.name + ": print");
+                return myClassS_2.name;
+            }
+        }
+
+        myClassS.prototype.printName= function(){
+            var abc = "abc";
+            alert(this.name + "," + this.getName02()+ ": prototype " + abc);
+        }
+        function objTest(){
+            var cls = new myClassS();
+
+            alert(cls.name); //접근 가능
+            alert(cls.name02); // 접근 불가능
+            alert(cls.getName02());
+            cls.printName();
+
+            // var cls2 = new myClassS_2().name;
+            //alert(cls2);
+            window.alert(myClassS_2.name);
+            myClassS_2.print();
+        }
+    </script>
+</head>
+<body>
+    <pre>
+        객체 : 관련된 데이터와 함수의 집합
+        객체의 구성:
+        -메소드 : 기능 정의
+        -속성 : 객체 내부 데이터
+        -this : 객체 내부의 메소드나 속성을 정의할 떄 사용
+        -프로토 타입 : 객체의 확장
+    </pre>
+    <button onclick="objTest();">객체</button>
+</body>
+</html>
