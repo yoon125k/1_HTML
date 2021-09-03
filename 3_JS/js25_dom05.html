@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 추가</title>
+    <style>
+        p{
+            border: 1px solid red;
+        }
+        #test01,#test02{
+            width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+        }
+    </style>
+    <script>
+        function addAppend(){
+            var fieldset = document.getElementById("addele");
+            var p = document.createElement("p");
+
+            p.textContent = "자식태그들 중 마지막에 붙여 넣는다"
+
+            fieldset.appendChild(p);
+        }
+        function addBefore(){
+            var newP = document.createElement("p");
+            var fieldset = document.getElementById("addele");
+
+            newP.textContent="엘리먼트의 앞에 붙여 넣는다."
+
+            var oldDiv = document.querySelector("fieldset > div");
+            fieldset.insertBefore(newP,oldDiv);
+        }
+        function moveElement(){
+            var moveEle = document.querySelector("fieldset").children[1];   
+            document.body.appendChild(moveEle);
+        }
+
+        function addTest(){
+            var div = document.createElement(div);
+            div.textContent = "dom test";
+            document.getElementById("test01").appendChild(div);
+            
+            // var txt = document.createTextNode("dom text");
+            // var oldDiv = document.querySelectorAll("div");
+            // selDiv.appendChild(div);
+            // console.log(oldDiv[1]);
+            // oldDiv[1].appendChild(txt);
+            // document.body.appendChild(oldDiv[1]);
+        }
+        function moveTest(){
+            var allDiv = document.querySelector("#test01").children[0];
+
+            var test02 = document.getElementById("test02");
+            test02.appendChild(allDiv);
+            // var selDiv = document.getElementById("test01");
+            // console.log(selDiv);
+            // document.body.appendChild(selDiv);
+        }
+    </script>
+</head>
+<body>
+    <h1>태그 추가하기</h1>
+
+    <button onclick="addAppend();">appechdChild()</button>
+    <button onclick="addBefore();">insertBefore()</button>
+    <button onclick="moveElement();">appenChild를 이용한 엘리먼트 이동</button>
+    <fieldset id="addele">
+        <legend>부모태그</legend>
+        <div>div태그</div>
+    </fieldset>
+
+    <hr>
+    <h3>문제 1: test01 태그에 "dom text"라는 내용을 가진 div 태그를 추가
+        <button onclick="addTest();">클릭1</button>
+    </h3>
+    <h3>문제 2: test01 태그에 추가된 태그들을 test02로 이동</h3>
+        <button onclick="moveTest();">클릭2</button>
+
+        *test01
+        <div id="test01"></div>
+        *test02
+        <div id="test02"></div>
+</body>
+</html>
